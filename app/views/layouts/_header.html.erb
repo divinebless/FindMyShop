@@ -1,19 +1,21 @@
 
-<div class= "well">
-
-<div id="navMenu">
+<div class= "well" style="padding-top:5px" >
+<div class="span2"> <%= image_tag "logo.jpg"%></div>
+<div id="navMenu" style="padding-top:18px">
 
   <ul>
+
      <li><%= link_to "Home",root_path %></li> 
     
      <li><%= link_to "Categories",home_Categories_path %>
   <ul>
 
-    <li><%= link_to "1"%></li>
-    <li><%= link_to "1"%></li>
-    <li><%= link_to "1"%></li>
-    <li><%= link_to "1"%></li>
-    <li><%= link_to "1"%></li>
+
+    <li><%= link_to "Computers"%></li>
+    <li><%= link_to "Accessories"%></li>
+    <li><%= link_to "Arcades"%></li>
+    <li><%= link_to "Salons"%></li>
+    <li><%= link_to "Shoes"%></li>
 
   </ul> <!-- end inner UL -->
   </li> <!-- end main LI -->
@@ -23,11 +25,9 @@
   
   </ul> <!-- end main UL -->
 
-<form class="navbar-form pull-right">
-<input type="text" class="span3" id="fname">
-<input type="submit" name="Submit" value="Search"  class="btn btn-primary" >
+<form class="navbar-search" accept-charset="utf-8">
+<input type="text" class="search-query" placeholder="Search">
 </form>
-
 
  <br class="clearFloat" />
 
