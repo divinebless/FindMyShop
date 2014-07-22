@@ -1,4 +1,7 @@
 FindMyShop::Application.routes.draw do
+  resources :comments
+
+
   get "home/index"
 
   devise_for :users 
