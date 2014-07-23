@@ -1,7 +1,7 @@
 #navMenu {
     margin:0;
     width:auto;
-    margin-left: 80px
+    margin-left: 200px
     
  }
 
@@ -19,19 +19,28 @@
     position:relative;
     background:#006dcc;
 
+    background-image: -moz-linear-gradient(top, #0088cc, #003399);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#003399));
+    background-image: -webkit-linear-gradient(top, #0088cc, #003399);
+    background-image: -o-linear-gradient(top, #0088cc, #003399);
+    background-image: linear-gradient(to bottom, #0088cc, #003399);
+   
+
+
+
  }
 
   #navMenu ul li a {
     text-align:center; 
     height:30px;
-    width:150px;
+    width:120px;
     display:block;
     color:#000;
     font-family:"Comic Sans MS", cursive;
     text-decoration:none;
     color:#FFF;
-    border:1px solid #FFF;
-    font-size: 18px;
+    border:1px solid #149bdf;
+    font-size: 15px;
    /* text-shadow:1px 1px 1px #FFF; */ 
  }
 
