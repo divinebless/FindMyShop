@@ -11,13 +11,14 @@ FindMyShop::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
   
+  root :to => 'home#index'
   get 'home/Categories'
   get 'home/Help'
   get 'home/AboutUs'
   get 'home/ContactUs'
   get 'comments/new'
+  get 'home/Profile'
 
-  root :to => 'profiles#new'
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

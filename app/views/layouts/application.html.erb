@@ -6,11 +6,10 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body class="container-fluid">
+<body class="container-fluid" style="background-image: url('/assets/bg_top.jpg');">
 
  <%= render :partial => 'layouts/header' %>
        
-
 
 <%= yield %>
  <p class="notice"><%= notice %></p>

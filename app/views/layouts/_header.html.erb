@@ -1,11 +1,11 @@
 
-<div class= "well" style="padding-top:5px" >
-<div class="span2"><%= image_tag "logo.png"%></div>
+<div class= "well" style="padding-top:2px" >
+<div class="span2"><%= image_tag "logo4.png"%></div>
 <div id="navMenu" style="padding-top:18px">
 
   <ul>
 
-     <li><%= link_to "Home",home_index_path %></li> 
+     <li><%= link_to "Home",root_path %></li> 
     
      <li><%= link_to "Categories",home_Categories_path %>
   <ul>
@@ -21,16 +21,17 @@
   </li> <!-- end main LI -->
   <li><%= link_to "About us",home_AboutUs_path %></li> 
   <li><%= link_to "Contact us",comments_new_path %></li>
-  <li><%= link_to "Profile",root_path %></li>
-  <% if user_signed_in? %>
-    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-  <% end %>
+  <li><%= link_to "Profile",home_Profile_path%></li>
+ 
 
   <li><%= link_to "Help",home_Help_path %></li> 
+ <li> <% if user_signed_in? %>
+  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+   <% end %></li>
   
   </ul> <!-- end main UL -->
 
-<form class="navbar-form pull-right">
+<form class="navbar-form pull-right" >
 <input type="text" class="span2" id="fname">
 <input type="submit" name="Submit" value="Search"  class="btn btn-primary" >
 </form>

@@ -1,6 +1,8 @@
 <div class="row-fluid">
-<div class="span3" ></div>
- <div class="span6"></div>
+<div class="span3 " style="font-size:15px">Welcome to Find my shop as you search for your favourite shops,   clothes,accesories,shoes and many more enjoy!!</div>,
+ <div class="span6">
+ <%= image_tag "Golf Shop Image.JPG"%>	
+ </div>
  <div class="pull-right">
  <div class="well">
 <h3>Sign in</h3>
@@ -16,7 +18,7 @@
     <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
   <% end -%>
 
-  <div><%= f.submit "Sign in" %></div>
+  <div class="btn-primary"><%= f.submit "Sign in",:class=>'btn-block'%></div>
 <% end %>
 
 <%= render "devise/shared/links" %>
