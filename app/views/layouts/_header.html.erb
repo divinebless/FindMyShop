@@ -5,7 +5,7 @@
 
   <ul>
 
-     <li><%= link_to "Home",root_path %></li> 
+     <li><%= link_to "Home",home_index_path %></li> 
     
      <li><%= link_to "Categories",home_Categories_path %>
   <ul>
@@ -20,8 +20,12 @@
   </ul> <!-- end inner UL -->
   </li> <!-- end main LI -->
   <li><%= link_to "About us",home_AboutUs_path %></li> 
-  <li><%= link_to "Contact us",home_ContactUs_path %></li>
-    <li><%= link_to "Profile",home_Profile_path %></li>
+  <li><%= link_to "Contact us",comments_new_path %></li>
+  <li><%= link_to "Profile",root_path %></li>
+  <% if user_signed_in? %>
+    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+  <% end %>
+
   <li><%= link_to "Help",home_Help_path %></li> 
   
   </ul> <!-- end main UL -->
