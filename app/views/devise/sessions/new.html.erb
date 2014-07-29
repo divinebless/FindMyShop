@@ -1,7 +1,7 @@
 <div class="row-fluid">
 <div class="span3 " style="font-size:15px"><%= image_tag("imagez.jpeg",width:250, height:180,:crop => :fill) %><br/><br/>
 Welcome to Find my shop as you search for your favourite shops,   clothes,accesories,shoes and many more enjoy!!</div>,
- <div class="span6">
+ <div class="span6" >
 <%= image_tag("imags.jpeg",width:1500, height:1800,:crop => :fill) %>
  </div>
  <div class="pull-right">
@@ -20,7 +20,7 @@ Welcome to Find my shop as you search for your favourite shops,   clothes,acceso
   <% end -%>
  
 
-  <div class="btn-primary"><%= f.submit "Sign in",:class=>'btn-block'%></div>
+  <div><%= f.submit "Sign in",:class =>"btn btn-primary", :style => "width:220px;" %></div>
 <% end %>
 
 <%= render "devise/shared/links" %>

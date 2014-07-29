@@ -1,6 +1,6 @@
 
 <div class= "well" style="padding-top:2px" >
-<div class="span2"><%= image_tag "logo4.png"%></div>
+<div class="span2" ><%= image_tag "logo4.png"%></div>
 <div id="navMenu" style="padding-top:18px">
 
   <ul>
@@ -25,14 +25,17 @@
  
 
   <li><%= link_to "Help",home_Help_path %></li> 
- <li> <% if user_signed_in? %>
-  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-   <% end %></li>
-  
-  </ul> <!-- end main UL -->
+  <% if user_signed_in? %>
+    <%= link_to 'Sign Out', destroy_user_session_path, method:
+    :delete %>
+    <% end %>
 
-<form class="navbar-form pull-right" >
-<input type="text" class="span2" id="fname">
+   
+
+ 
+  </ul> <!-- end main UL -->
+   <form class="navbar-form pull-left">
+<input type="text" class="span4" id="fname">
 <input type="submit" name="Submit" value="Search"  class="btn btn-primary" >
 </form>
 
