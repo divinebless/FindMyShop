@@ -1,8 +1,10 @@
 class ProfilesController < ApplicationController
   # GET /profiles
   # GET /profiles.json
+  before_filter :authenticate_user!, :only => [:index, :new]
+
   def index
-    @profiles = User.all
+    @profiles = Profile.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +15,7 @@ class ProfilesController < ApplicationController
   # GET /profiles/1
   # GET /profiles/1.json
   def show
-    @profile = User.find(params[:id])
+    @profile = Profile.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +26,7 @@ class ProfilesController < ApplicationController
   # GET /profiles/new
   # GET /profiles/new.json
   def new
-    @profile = User.new
+    @profile = Profile.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +36,13 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/1/edit
   def edit
-    @profile = User.find(params[:id])
+    @profile = Profile.find(params[:id])
   end
 
   # POST /profiles
   # POST /profiles.json
   def create
-    @profile = User.new(params[:profile])
+    @profile = Profile.new(params[:profile])
 
     respond_to do |format|
       if @profile.save
@@ -56,7 +58,7 @@ class ProfilesController < ApplicationController
   # PUT /profiles/1
   # PUT /profiles/1.json
   def update
-    @profile = User.find(params[:id])
+    @profile = Profile.find(params[:id])
 
     respond_to do |format|
       if @profile.update_attributes(params[:profile])
@@ -72,7 +74,7 @@ class ProfilesController < ApplicationController
   # DELETE /profiles/1
   # DELETE /profiles/1.json
   def destroy
-    @profile = User.find(params[:id])
+    @profile = Profile.find(params[:id])
     @profile.destroy
 
     respond_to do |format|

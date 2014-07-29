@@ -3,7 +3,9 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.18'
 gem 'therubyracer'
 gem 'less-rails'
-gem 'twitter-bootstrap-rails'							
+
+gem 'twitter-bootstrap-rails'	
+gem "paperclip", "~> 4.1"						
 
 
 # Bundle edge Rails instead:
