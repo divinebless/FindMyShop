@@ -1,19 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  user_id: 1
-  fname: MyString
-  lname: MyString
-  email: MyString
-  address: MyString
-  shop_no: MyString
-  district: MyString
+  First_name: MyString
+  Last_name: MyString
+  Address: MyString
+  Shop_no: MyString
 
 two:
-  user_id: 1
-  fname: MyString
-  lname: MyString
-  email: MyString
-  address: MyString
-  shop_no: MyString
-  district: MyString
+  First_name: MyString
+  Last_name: MyString
+  Address: MyString
+  Shop_no: MyString

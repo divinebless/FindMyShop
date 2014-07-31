@@ -7,20 +7,25 @@
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
+   
+    <div class="field">
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
 
-  <div><%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
+  
+  <%= f.email_field :email,:placeholder =>"Email" %><br/>
 
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+
+    <%= f.password_field :password, autocomplete: "off",:placeholder =>"password" %><br/>
+
+    <%= f.password_field :password_confirmation, autocomplete: "off",:placeholder =>"password_confirmation"%><br/>
+    </div>
 
   <div><%= f.submit "Sign up",:class =>"btn btn-primary", :style => "width:220px;" %></div>
+
 <% end %>
 
 <%= render "devise/shared/links" %>
 </div>
 </div>
 </div>
+ 

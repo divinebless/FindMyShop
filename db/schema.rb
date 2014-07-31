@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140729124613) do
+ActiveRecord::Schema.define(:version => 20140730093033) do
 
   create_table "comments", :force => true do |t|
     t.string   "Name"
@@ -22,23 +22,11 @@ ActiveRecord::Schema.define(:version => 20140729124613) do
     t.datetime "updated_at",   :null => false
   end
 
-  create_table "contacts", :force => true do |t|
-    t.string   "Name"
-    t.string   "Email"
-    t.string   "phone_number"
-    t.string   "message"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-  end
-
   create_table "profiles", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "fname"
-    t.string   "lname"
-    t.string   "email"
-    t.string   "address"
-    t.string   "shop_no"
-    t.string   "district"
+    t.string   "First_name"
+    t.string   "Last_name"
+    t.string   "Address"
+    t.string   "Shop_no"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -56,17 +44,15 @@ ActiveRecord::Schema.define(:version => 20140729124613) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
-    t.string   "First_name"
-    t.string   "Last_name"
-    t.date     "Gender"
-    t.integer  "phone_number"
-    t.string   "company"
-    t.string   "Location"
-    t.string   "street"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "First_name"
+    t.string   "Last_name"
+    t.string   "Address"
+    t.string   "ShopNo"
+    t.string   "District"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
