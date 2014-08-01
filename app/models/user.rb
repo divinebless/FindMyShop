@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 	 attr_accessible :email, :password, :password_confirmation, :remember_me, :First_name,
-	 :Last_name,:Location,:Country,:avatar, :avatar_file_name
+	 :Last_name,:country,:avatar, :avatar_file_name
 
 	has_attached_file :avatar, :styles => { :large => "500x500>", :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
   	validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/

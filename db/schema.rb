@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140801092211) do
+ActiveRecord::Schema.define(:version => 20140801104604) do
 
   create_table "businesses", :force => true do |t|
     t.string   "name"
@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(:version => 20140801092211) do
     t.string   "district"
     t.string   "arcade"
     t.string   "street"
-    t.string   "building"
     t.string   "town"
+    t.date     "date"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(:version => 20140801092211) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.string   "country"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
