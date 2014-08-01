@@ -4,7 +4,7 @@
 
 	<% @user.each do |i|%>
 		<%= image_tag i.avatar.url(:thumb) %>
-		<%= i.First_name %>
+		<%= i.email%>
 		<%= i.Last_name %>
 
 	<% end %>	
