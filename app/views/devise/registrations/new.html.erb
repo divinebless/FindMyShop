@@ -1,5 +1,5 @@
 <div class="row-fluid">
-<div class="span3 " ></div>
+
  <div class="span6 "> <%= image_tag("index1.jpeg",width:1500, height:1800,:crop => :fill) %></div>
  <div class="pull-right">
  <div class="well">
@@ -13,8 +13,7 @@
 
 
   <%= f.text_field :Last_name,:placeholder =>"LastName" %><br/>
-  <%= f.text_field :country,:placeholder =>"Country" %><br/>
-
+ 	<%= f.select :country,options_for_select(['Uganda']) %><br/>
 
 
   <%= f.email_field :email,:placeholder =>"Email" %><br/>
