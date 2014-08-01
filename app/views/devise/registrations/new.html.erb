@@ -9,9 +9,13 @@
   <%= devise_error_messages! %>
    
     <div class="field">
+  <%= f.text_field :First_name, autofocus: true, :placeholder =>"FirstName" %><br/>
 
 
-  
+  <%= f.text_field :Last_name,:placeholder =>"LastName" %><br/>
+
+
+
   <%= f.email_field :email,:placeholder =>"Email" %><br/>
 
 
