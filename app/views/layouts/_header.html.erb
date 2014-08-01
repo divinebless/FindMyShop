@@ -34,6 +34,10 @@ data-target=".nav-collapse">
   </li> <!-- end main LI -->
   <li><%= link_to "About us",home_AboutUs_path %></li> 
   <li><%= link_to "Contact us",comments_new_path %></li>
+  <% if user_signed_in? %>
+     <li><%= link_to "Business",businesses_new_path %></li>
+    <% end %>
+
  
 
   <li><%= link_to "Help",home_Help_path %></li> 

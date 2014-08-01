@@ -1,13 +1,17 @@
-<h1>WELCOME</h1>
+<h2>WELCOME TO FIND MY SHOP</h2>
 
 <div class="row">
+<div class="span2">
 
 	<% @user.each do |i|%>
-		<%= image_tag i.avatar.url(:thumb) %>
-		<%= i.email%>
-		<%= i.Last_name %>
+		<%= image_tag i.avatar.url(:medium) %></div>
+	<div class="span2"><%= i.email%><br/>
+		<%= i.First_name%><br/>
+		<%= i.Last_name %><br/>
+		<%= i.country%></div>
 
 	<% end %>	
+	
 </div>
 </div>
 

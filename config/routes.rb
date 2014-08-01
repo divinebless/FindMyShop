@@ -18,6 +18,7 @@ FindMyShop::Application.routes.draw do
   get 'home/ContactUs'
   get 'comments/new'
   get 'home/Profile'
+  get 'businesses/new'
 
 
   # Sample of regular route:
