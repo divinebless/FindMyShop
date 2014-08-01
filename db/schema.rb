@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140730093033) do
+ActiveRecord::Schema.define(:version => 20140801073504) do
 
   create_table "comments", :force => true do |t|
     t.string   "Name"
@@ -20,15 +20,6 @@ ActiveRecord::Schema.define(:version => 20140730093033) do
     t.text     "Message"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
-  end
-
-  create_table "profiles", :force => true do |t|
-    t.string   "First_name"
-    t.string   "Last_name"
-    t.string   "Address"
-    t.string   "Shop_no"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -50,9 +41,10 @@ ActiveRecord::Schema.define(:version => 20140730093033) do
     t.datetime "image_updated_at"
     t.string   "First_name"
     t.string   "Last_name"
-    t.string   "Address"
-    t.string   "ShopNo"
-    t.string   "District"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
