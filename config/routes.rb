@@ -1,4 +1,7 @@
 FindMyShop::Application.routes.draw do
+  resources :businesses
+
+
   resources :comments
 
 
